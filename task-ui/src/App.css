@@ -1,0 +1,176 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple-Blue Gradient */
+  color: #333;
+  min-height: 100vh;
+}
+
+.App {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Heading Style */
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Input Area */
+.input-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  display: inline-flex;
+  gap: 10px;
+  backdrop-filter: blur(10px); /* Glass Effect */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 300px;
+  font-size: 16px;
+}
+
+button.add-btn {
+  padding: 12px 25px;
+  background: #ff0080; /* Neon Pink */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.add-btn:hover {
+  background: #d6006c;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 128, 0.5);
+}
+
+/* Kanban Columns */
+.columns-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* .column {
+  background: rgba(255, 255, 255, 0.85); 
+  padding: 20px;
+  border-radius: 16px;
+  width: 320px;
+  min-height: 400px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.column h3 {
+  color: #4a4a4a;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+} */
+
+/* Task Cards */
+.task-card {
+  user-select: none;
+  padding: 16px;
+  margin: 0 0 12px 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease; /* Smooth Animation */
+}
+
+/* Hover Animation: Card Upar Uthega */
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #ffebf0;
+  color: #d6002f;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d6002f;
+  color: white;
+  transform: rotate(90deg); /* Ghoomne wala animation */
+}
+
+/* --- Naya Column Design --- */
+
+/* Common Settings for all columns */
+.column {
+  padding: 20px;
+  border-radius: 16px;
+  width: 320px;
+  min-height: 400px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  border-top: 5px solid transparent; /* Upar color line ke liye */
+}
+
+/* 1. TODO - Soft Blue */
+.column-Todo {
+  background: #e3f2fd; /* Light Blue */
+  border-top-color: #2196f3; /* Dark Blue Line */
+}
+
+/* 2. IN PROGRESS - Soft Orange */
+.column-InProgress {
+  background: #fff3e0; /* Light Orange */
+  border-top-color: #ff9800; /* Dark Orange Line */
+}
+
+/* 3. DONE - Soft Green */
+.column-Done {
+  background: #e8f5e9; /* Light Green */
+  border-top-color: #4caf50; /* Dark Green Line */
+}
+
+/* Heading Style Update */
+.column h3 {
+  color: #333;
+  background: rgba(255,255,255,0.6); /* Text ke piche thoda white */
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 0;
+}
