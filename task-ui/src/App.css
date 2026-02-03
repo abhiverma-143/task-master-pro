@@ -174,3 +174,36 @@ button.add-btn:hover {
   text-align: center;
   margin-top: 0;
 }
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  
+  /* 1. Main Board ko Column banao */
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* 2. Column ki height chhoti karo */
+  .column {
+    width: 95% !important; /* Full width */
+    min-height: 150px; /* Height kam kar di taaki scroll na karna pade */
+    margin-bottom: 20px;
+  }
+
+  /* 3. Input aur Button ko sahi karo */
+  .input-container {
+    width: 95%;
+    flex-direction: column; /* Input upar, button neeche */
+    gap: 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
