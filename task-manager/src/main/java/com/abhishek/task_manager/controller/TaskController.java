@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = "http://localhost:3000") // React ke liye permission
+@CrossOrigin("*") // React ke liye permission
 public class TaskController {
 
     @Autowired
