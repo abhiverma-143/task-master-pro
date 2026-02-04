@@ -21,7 +21,7 @@ function App() {
 
   const fetchTasks = () => {
     axios
-      .get("http://localhost:8081/api/tasks")
+      .get("https://task-master-pro-w1l6.onrender.com/api/tasks")
       .then((res) => setTasks(res.data))
       .catch((err) => console.error(err));
   };
@@ -29,7 +29,7 @@ function App() {
   const addTask = () => {
     if (!newTask) return;
     axios
-      .post("http://localhost:8081/api/tasks", {
+      .post("https://task-master-pro-w1l6.onrender.com/api/tasks", {
         title: newTask,
         status: "Todo",
       })
@@ -41,7 +41,7 @@ function App() {
 
   const deleteTask = (id) => {
     axios
-      .delete(`http://localhost:8081/api/tasks/${id}`)
+      .delete(`https://task-master-pro-w1l6.onrender.com/api/tasks/${id}`)
       .then(() => setTasks(tasks.filter((t) => t.id !== id)))
       .catch((err) => console.error(err));
   };
@@ -62,7 +62,7 @@ function App() {
     );
     setTasks(updatedTasks);
 
-    axios.put(`http://localhost:8081/api/tasks/${draggableId}`, {
+    axios.put(`https://task-master-pro-w1l6.onrender.com/api/tasks/${draggableId}`, {
       status: newStatus,
     });
   };
