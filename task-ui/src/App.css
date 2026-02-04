@@ -145,9 +145,9 @@ button.add-btn:hover {
   flex-direction: column;
   transition: transform 0.2s;
   border-top: 5px solid transparent; /* Upar color line ke liye */
-  max-height: 70vh;   /* 👈 1. Height fix kar di (Screen ka 70%) */
-  overflow-y: auto;   /* 👈 2. Agar tasks zyada hon toh scrollbar aa jaye */
-  scrollbar-width: thin; /* 👈 3. Scrollbar thoda patla aur sunder dikhe */
+ max-height: 65vh !important;  /* Screen ka 65% hi lega, usse zyada nahi */
+  overflow-y: auto !important;  /* Scrollbar on */
+  flex-shrink: 0;               /* Column picchkega nahi */
 }
 
 .column::-webkit-scrollbar {
