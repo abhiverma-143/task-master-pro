@@ -145,6 +145,18 @@ button.add-btn:hover {
   flex-direction: column;
   transition: transform 0.2s;
   border-top: 5px solid transparent; /* Upar color line ke liye */
+  max-height: 70vh;   /* 👈 1. Height fix kar di (Screen ka 70%) */
+  overflow-y: auto;   /* 👈 2. Agar tasks zyada hon toh scrollbar aa jaye */
+  scrollbar-width: thin; /* 👈 3. Scrollbar thoda patla aur sunder dikhe */
+}
+
+.column::-webkit-scrollbar {
+  width: 5px;
+}
+
+.column::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
 
 /* 1. TODO - Soft Blue */
